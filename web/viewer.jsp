@@ -38,7 +38,7 @@
         <script type="text/javascript" src="${baseUrl}/js/proj4js-compressed.js"></script>
         
         <!-- My application -->
-        <script type="text/javascript" src="${baseUrl}/js/app2.js"></script>           
+        <script type="text/javascript" src="${baseUrl}/js/app.js"></script>           
 
         <!-- HEAD: END OF YOUR CODE -->
     </head> 
