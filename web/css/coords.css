@@ -1,0 +1,49 @@
+/* 
+    Created on : Jun 26, 2014, 11:54:01 AM
+    Author     : Nikos Minadakis, Alexandros Gougousis
+*/
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 2em 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    width: auto !important;
+    margin-bottom: 0px !important;
+    border-bottom: none;
+}            
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.alert {
+    padding: 7px 15px !important;
+}
+
+.alert-warning {
+    margin-top: 5px;
+}

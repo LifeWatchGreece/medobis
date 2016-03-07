@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+    <!-- Application-wide parameters -->
+    <context-param>
+        <description>Storage path for Coordinates Transformation Tool</description>
+        <param-name>coordsStoragePath</param-name>
+        <param-value></param-value>
+    </context-param>
+    <context-param>
+        <description>MedOBIS vLab base URL</description>
+        <param-name>medobisBaseUrl</param-name>
+        <param-value></param-value>
+    </context-param>
+    <context-param>
+        <description>Log file path</description>
+        <param-name>logFilePath</param-name>
+        <param-value></param-value>
+    </context-param>
+    <context-param>
+        <description>CSV value separator</description>
+        <param-name>csvSeparator</param-name>
+        <param-value>;</param-value>
+    </context-param>
+    <context-param>
+        <description>MySQL User</description>
+        <param-name>mysqlUser</param-name>
+        <param-value>medobisuser</param-value>
+    </context-param>
+    <context-param>
+        <description>MySQL Password</description>
+        <param-name>mysqlPwd</param-name>
+        <param-value>arkouda67T-</param-value>
+    </context-param>
+    <context-param>
+        <description>MySQL Connection URL</description>
+        <param-name>mysqlUrl</param-name>
+        <param-value></param-value>
+    </context-param>
+    <context-param>
+        <description>Path for KML file uploading</description>
+        <param-name>kmlPath</param-name>
+        <param-value>
+             
+         </param-value>
+    </context-param>
+    <context-param>
+        <description>Path for Grid Data Exporting</description>
+        <param-name>gridFilePath</param-name>
+        <param-value>
+             
+         </param-value>
+    </context-param>
+    
+    <!-- MedOBIS vLab (servlet declaration) -->
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.HomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewerServlet</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.ViewerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>KmlServlet</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.KmlServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GridServlet</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.GridServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.LoginServlet</servlet-class>
+    </servlet>
+    
+    <!-- Coordination Transformation Tool (servlet declaration) -->
+    <servlet>
+        <servlet-name>CoordsHomeServlet</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.coords.CoordsHomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CoordinatesTransformer</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.coords.CoordinatesTransformer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SimpleCoordinatesTransformer</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.coords.SimpleCoordinatesTransformer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileDownload</servlet-name>
+        <servlet-class>eu.lifewatchgreece.medobis.coords.FileDownload</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileUpload</servlet-name>
+        <servlet-class>eu.lifewatchgreece.portal.coords.FileUpload</servlet-class>
+    </servlet>
+    
+    <!-- Public files (servlet mappings) -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.png</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.gif</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.kml</url-pattern>
+    </servlet-mapping>
+    
+    <!-- MedOBIS vLab (servlet mappings) -->
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewerServlet</servlet-name>
+        <url-pattern>/viewer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>KmlServlet</servlet-name>
+        <url-pattern>/uploadKml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>KmlServlet</servlet-name>
+        <url-pattern>/getKmlFile/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GridServlet</servlet-name>
+        <url-pattern>/saveGridFeatures</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GridServlet</servlet-name>
+        <url-pattern>/gridData/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Coordination Transformation Tool (servlet mappings -->    
+    <servlet-mapping>
+        <servlet-name>CoordsHomeServlet</servlet-name>
+        <url-pattern>/coords</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SimpleCoordinatesTransformer</servlet-name>
+        <url-pattern>/coords/SimpleCoordinatesTransformer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CoordinatesTransformer</servlet-name>
+        <url-pattern>/coords/CoordinatesTransformer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileDownload</servlet-name>
+        <url-pattern>/coords/file_download</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileUpload</servlet-name>
+        <url-pattern>/coords/file_upload</url-pattern>
+    </servlet-mapping>        
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

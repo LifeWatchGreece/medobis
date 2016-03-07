@@ -1,0 +1,23 @@
+.gxp-icon-uploadkmlfile {
+    background-image: url("./../images/kml.png");
+    background-repeat: no-repeat;
+}
+
+.kmluploadbutton {
+    margin-top: 3px;
+}
+
+div.olControlMousePosition {
+    bottom: 20px !important;
+    font-size: 13px;
+    background:rgba(255,255,255,0.5);
+    padding: 0px 5px;
+}
+
+.ext-strict .x-small-editor .x-form-text {
+    height: 20px !important;
+}
+
+.x-form-file-wrap .x-form-file-btn {
+    top: 2px;
+}
