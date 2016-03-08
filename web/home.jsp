@@ -14,6 +14,12 @@
                 cursor: pointer;
                 border-color: blue;
             }            
+            .docs_row_item:hover {
+                cursor: pointer;
+            }
+            .docs_img {
+                height: 60px;
+            }        
         </style>
         <!-- HEAD: END OF YOUR CODE -->
     </head> 
@@ -53,7 +59,32 @@ The user can calculate a single position or a spreadsheet of coordinates.
                   </p>                 
                 </div>
               </div>
-            </div>            
+            </div>    
+            <div class="col-md-4" style="text-align: center">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Documentation/Tutorials</div>
+                    <div class="panel-body">
+                        <table class="table table-hover" style="margin-bottom: 0px">
+                            <tr class="docs_row_item" onclick="window.location='${baseUrl}/files/public/Medobis_viewer_Tutorial.pdf'">
+                                <td><img src="${baseUrl}/images/pdf.png" class='docs_img'></td>
+                                <td style="vertical-align: middle">MedOBIS viewer Tutorial</td>
+                            </tr>
+                            <tr class="docs_row_item" onclick="window.location='${baseUrl}/files/public/Coordinates_Transformation_Tool_Tutorial.pdf'">
+                                <td><img src="${baseUrl}/images/pdf.png" class='docs_img'></td>
+                                <td style="vertical-align: middle">Coordinates Transformation Tool Tutorial</td>
+                            </tr>
+                            <tr class="docs_row_item" onclick="window.location='${baseUrl}/files/public/example1.csv'">
+                                <td><img src="${baseUrl}/images/csv.png" class='docs_img'></td>
+                                <td style="vertical-align: middle">example1.csv</td>
+                            </tr>
+                            <tr class="docs_row_item" onclick="window.location='${baseUrl}/files/public/example2.csv'">
+                                <td><img src="${baseUrl}/images/csv.png" class='docs_img'></td>
+                                <td style="vertical-align: middle">example2.csv</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- BODY: END OF YOUR CODE -->
         <jsp:include page="/template/body_bottom.jsp"><jsp:param name="baseUrl" value="${baseUrl}" /></jsp:include>

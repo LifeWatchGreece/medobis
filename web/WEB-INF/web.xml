@@ -121,6 +121,10 @@
         <servlet-name>default</servlet-name>
         <url-pattern>*.kml</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/files/public/*</url-pattern>
+    </servlet-mapping>
     
     <!-- MedOBIS vLab (servlet mappings) -->
     <servlet-mapping>
